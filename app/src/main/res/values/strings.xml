@@ -1,3 +1,10 @@
 <resources>
+
     <string name="app_name">ChildhoodMemories</string>
+
+    <!--Memory-->
+    <string name="memory_date">Date</string>
+    <string name="memory_title">Title</string>
+    <string name="memory_description">Description</string>
+
 </resources>
