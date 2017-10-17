@@ -22,7 +22,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:ellipsize="start"
+            android:inputType="textCapWords|textPersonName"
+            />
 
         <TextView
             android:id="@+id/memory_date_txtv"

@@ -3,8 +3,8 @@
     <string name="app_name">ChildhoodMemories</string>
 
     <!--Memory-->
-    <string name="memory_date">Date</string>
-    <string name="memory_title">Title</string>
-    <string name="memory_description">Description</string>
+    <string name="memory_date">Add date</string>
+    <string name="memory_title">Add title</string>
+    <string name="memory_description">Add description</string>
 
 </resources>
