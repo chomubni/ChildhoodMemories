@@ -1,20 +1,16 @@
 package com.kisslove.childhoodmemories;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kisslove.childhoodmemories.image_utils.CornerBitmap;
 import com.kisslove.childhoodmemories.model.Memory;
 import com.kisslove.childhoodmemories.model.MemoryLab;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by ivan on 17.10.17.
@@ -39,11 +35,10 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Memor
 
     @Override
     public void onBindViewHolder(MemoryHolder holder, int position) {
-        MemoryHolder memoryHolder = (MemoryHolder)holder;
         Memory memory = memoryLab.getMemoryList().get(position);
-        memoryHolder.memoryDate.setText(memory.getMemoryDate().toString());
-        memoryHolder.memoryTitle.setText(memory.getTitle());
-        memoryHolder.memoryImage.setImageDrawable(CornerBitmap.getCorneredBitmap(R.drawable.child, context));    ;
+        holder.memoryDate.setText(memory.getMemoryDate().toString());
+        holder.memoryTitle.setText(memory.getTitle());
+        holder.memoryImage.setImageResource(R.drawable.child);
     }
 
     @Override
@@ -53,7 +48,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Memor
 
     public class MemoryHolder extends RecyclerView.ViewHolder{
 
-        ImageView memoryImage;
+        CircleImageView memoryImage;
         TextView memoryTitle;
         TextView memoryDate;
 
