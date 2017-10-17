@@ -10,9 +10,15 @@ public class Memory {
     private long memoryId;
     private String title;
     private String description;
-    private String photoPath;
-    private String videoPath;
+    private int photoId;
+    private int videoId;
     private Date memoryDate;
+
+    public Memory(String title, int photoId, Date memoryDate) {
+        this.title = title;
+        this.photoId = photoId;
+        this.memoryDate = memoryDate;
+    }
 
     public long getMemoryId() {
         return memoryId;
@@ -38,20 +44,20 @@ public class Memory {
         this.description = description;
     }
 
-    public String getPhotoPath() {
-        return photoPath;
+    public int getPhotoId() {
+        return photoId;
     }
 
-    public void setPhotoPath(String photoPath) {
-        this.photoPath = photoPath;
+    public void setPhotoId(int photoId) {
+        this.photoId = photoId;
     }
 
-    public String getVideoPath() {
-        return videoPath;
+    public int getVideoId() {
+        return videoId;
     }
 
-    public void setVideoPath(String videoPath) {
-        this.videoPath = videoPath;
+    public void setVideoId(int videoId) {
+        this.videoId = videoId;
     }
 
     public Date getMemoryDate() {
